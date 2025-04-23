@@ -32,4 +32,38 @@ public class ShapeUtil {
             return createRandomRectangle();
         }
     }
+
+    double calculateArea(Shape shape) {
+        return shape.calculateArea();
+    }
+
+    double calculatePerimeter(Shape shape) {
+        return shape.calculatePerimeter();
+    }
+
+    public double calculateArea(Shape[] shapes) {
+        if(shapes == null) {
+            System.err.println("Массив не может быть пустым");
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        double sumArea = 0.0;
+
+        for(Shape s : shapes) {
+            sumArea += s.calculateArea();
+        }
+        return sumArea;
+    }
+
+    public double calculatePerimeter(Shape[] shapes) {
+        if(shapes == null) {
+            System.err.println("Массив не может быть пустым");
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        double sumPerimeter = 0.0;
+
+        for(Shape s : shapes) {
+            sumPerimeter += s.calculatePerimeter();
+        }
+        return sumPerimeter;
+    }
 }

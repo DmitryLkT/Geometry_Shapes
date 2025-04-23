@@ -21,4 +21,15 @@ public class ShapeUtil {
         } while(a == b);
         return new Rectangle("Rectangle", a, b);
     }
+
+    public Shape createRandomShape() {
+        int shape = rand.nextInt(2);
+        if(shape == 0) {
+            return createRandomCircle();
+        } else if(shape == 1) {
+            return createRandomSquare();
+        } else {
+            return createRandomRectangle();
+        }
+    }
 }

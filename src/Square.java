@@ -4,6 +4,10 @@ public class Square extends Shape {
     Square(String title, int a) {
         super(title);
         this.a = a;
+        if(a <= 0) {
+            System.err.println("Число не может быть отрицательным");
+            throw new IllegalArgumentException();
+        }
     }
 
     @Override

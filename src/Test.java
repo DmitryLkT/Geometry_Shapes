@@ -24,4 +24,16 @@ public class Test {
         Square s = new Square("A", 2);
         assertEquals(s.calculatePerimeter(), 8.00, 0.01);
     }
+
+    @org.junit.Test
+    public void rectangleCalculateArea() {
+        Rectangle r = new Rectangle("A", 2, 3);
+        assertEquals(r.calculateArea(), 6.00, 0.01);
+    }
+
+    @org.junit.Test
+    public void rectangleCalculatePerimeter() {
+        Rectangle r = new Rectangle("A", 2, 3);
+        assertEquals(r.calculatePerimeter(), 10.00, 0.01);
+    }
 }
